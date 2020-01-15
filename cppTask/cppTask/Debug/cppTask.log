@@ -1,0 +1,5 @@
+﻿  main.cpp
+main.obj : error LNK2019: unresolved external symbol "public: __thiscall Vector<unsigned int>::Vector<unsigned int>(void)" (??0?$Vector@I@@QAE@XZ) referenced in function _main
+main.obj : error LNK2019: unresolved external symbol "public: unsigned int __thiscall Vector<unsigned int>::Vector2(void)" (?Vector2@?$Vector@I@@QAEIXZ) referenced in function _main
+main.obj : error LNK2019: unresolved external symbol "public: __thiscall Vector<unsigned int>::~Vector<unsigned int>(void)" (??1?$Vector@I@@QAE@XZ) referenced in function _main
+F:\Task\cppTask\Debug\cppTask.exe : fatal error LNK1120: 3 unresolved externals
