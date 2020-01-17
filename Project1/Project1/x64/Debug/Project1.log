@@ -1,22 +1,43 @@
 ﻿  main.cpp
-c:\users\home\desktop\task\header.h(156): error C2065: 'U': undeclared identifier
-c:\users\home\desktop\task\header.h(156): error C2923: 'Matrix': 'U' is not a valid template type argument for parameter 'T'
-c:\users\home\desktop\task\header.h(157): error C2955: 'Matrix': use of class template requires template argument list
-  c:\users\home\desktop\task\header.h(9): note: see declaration of 'Matrix'
-c:\users\home\desktop\task\header.h(157): error C2244: 'Matrix<T>::operator *': unable to match function definition to an existing declaration
-  c:\users\home\desktop\task\header.h(156): note: see declaration of 'Matrix<T>::operator *'
-  c:\users\home\desktop\task\header.h(157): note: definition
-  c:\users\home\desktop\task\header.h(157): note: 'Matrix Matrix<T>::operator *(T)'
-  c:\users\home\desktop\task\header.h(157): note: existing declarations
-  c:\users\home\desktop\task\header.h(157): note: 'Matrix<T> Matrix<T>::operator *(T)'
-  c:\users\home\desktop\task\header.h(157): note: 'Matrix<T> Matrix<T>::operator *(Matrix<T> &)'
-c:\users\home\desktop\task\main.cpp(12): error C2679: binary '*': no operator found which takes a right-hand operand of type 'Matrix<size_t>' (or there is no acceptable conversion)
-  c:\users\home\desktop\task\header.h(52): note: could be 'Matrix<double> Matrix<double>::operator *(T)'
+c:\users\home\desktop\task\header.h(222): warning C4244: 'argument': conversion from 'T' to 'size_t', possible loss of data
           with
           [
               T=double
           ]
-  c:\users\home\desktop\task\header.h(47): note: or       'Matrix<double> Matrix<double>::operator *(Matrix<double> &)'
-  c:\users\home\desktop\task\main.cpp(12): note: while trying to match the argument list '(Matrix<double>, Matrix<size_t>)'
-c:\users\home\desktop\task\main.cpp(13): error C2440: 'initializing': cannot convert from 'Matrix<double>' to 'Matrix<size_t>'
-  c:\users\home\desktop\task\main.cpp(13): note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+  c:\users\home\desktop\task\main.cpp(11): note: see reference to function template instantiation 'task::Matrix<double> task::Matrix<double>::operator *<double>(task::Matrix<double>)' being compiled
+  c:\users\home\desktop\task\main.cpp(11): note: see reference to function template instantiation 'task::Matrix<double> task::Matrix<double>::operator *<double>(task::Matrix<double>)' being compiled
+c:\users\home\desktop\task\header.h(143): warning C4244: 'return': conversion from 'const size_t' to 'T', possible loss of data
+          with
+          [
+              T=double
+          ]
+  c:\users\home\desktop\task\header.h(142): note: while compiling class template member function 'T task::Matrix<T>::Rows(void) const'
+          with
+          [
+              T=double
+          ]
+  c:\users\home\desktop\task\header.h(89): note: see reference to function template instantiation 'T task::Matrix<T>::Rows(void) const' being compiled
+          with
+          [
+              T=double
+          ]
+  c:\users\home\desktop\task\header.h(334): note: while compiling class template member function 'task::Matrix<double>::~Matrix(void)'
+  c:\users\home\desktop\task\main.cpp(5): note: see reference to function template instantiation 'task::Matrix<double>::~Matrix(void)' being compiled
+  c:\users\home\desktop\task\main.cpp(5): note: see reference to class template instantiation 'task::Matrix<double>' being compiled
+c:\users\home\desktop\task\header.h(149): warning C4244: 'return': conversion from 'const size_t' to 'T', possible loss of data
+          with
+          [
+              T=double
+          ]
+  c:\users\home\desktop\task\header.h(148): note: while compiling class template member function 'T task::Matrix<T>::Cols(void) const'
+          with
+          [
+              T=double
+          ]
+  c:\users\home\desktop\task\header.h(92): note: see reference to function template instantiation 'T task::Matrix<T>::Cols(void) const' being compiled
+          with
+          [
+              T=double
+          ]
+c:\users\home\desktop\task\header.h(248): warning C4715: 'task::Matrix<double>::operator*<double>': not all control paths return a value
+  Project1.vcxproj -> C:\Users\Home\Desktop\Task\Project1\x64\Debug\Project1.exe
