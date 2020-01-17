@@ -3,17 +3,21 @@
 #include <iostream>
 #include <vector>
 #include "Header.h"
+
 namespace task
 {
-
-	template<class T>
-	class Vector : public Matrix<T>
+	template<class T = double>
+	class Vector : private Matrix<T>
 	{
+
+	protected:
+		template <typename T>
+		using Mat = std::vector<std::vector<T>>;
 
 	public:
 		Vector(size_t size_) : size(size_)
 		{
-			iVect = Matrix::Mat<T>(1, std::vector<T>(size_, 0));
+			iVect = Mat<T>(1, std::vector<T>(size_, 0));
 		}
 
 		Vector() :size(0)
@@ -50,6 +54,10 @@ namespace task
 		template<typename U>
 		Vector<T> operator*(Vector<U>);
 
+
+		template<typename U>
+		Matrix<U> operator*(Matrix<U>);
+
 		template<typename U>
 		Vector<T> operator+(U value_);
 
@@ -70,7 +78,7 @@ namespace task
 		~Vector();
 
 	private:
-		Matrix::Mat<T> iVect;
+		Mat<T> iVect;
 		size_t size;
 	};
 
@@ -183,6 +191,19 @@ namespace task
 		catch (const std::exception& e) {
 			std::cout << e.what();
 		}
+	}
+
+	template <class T>
+	template <typename U>
+	inline Matrix<U> Vector<T>::operator*(Matrix<U> B)
+	{
+		Matrix<U> helper(1, this->Size());
+		for (size_t i = 0; i < this->Size(); i++)
+		{
+			helper.SetValue(0, i, this->iVect[0][i]);
+		}
+		
+		return helper * B;
 	}
 
 	template<class T>

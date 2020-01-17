@@ -1,2 +1,91 @@
 ﻿  main.cpp
+c:\users\home\desktop\task\vector.h(200): warning C4244: 'argument': conversion from 'T' to 'size_t', possible loss of data
+          with
+          [
+              T=double
+          ]
+  c:\users\home\desktop\task\main.cpp(10): note: see reference to function template instantiation 'task::Matrix<T> task::Vector<T>::operator *<T>(task::Matrix<T>)' being compiled
+          with
+          [
+              T=double
+          ]
+  c:\users\home\desktop\task\main.cpp(10): note: see reference to function template instantiation 'task::Matrix<T> task::Vector<T>::operator *<T>(task::Matrix<T>)' being compiled
+          with
+          [
+              T=double
+          ]
+c:\users\home\desktop\task\vector.h(88): warning C4244: 'return': conversion from 'const size_t' to 'T', possible loss of data
+          with
+          [
+              T=double
+          ]
+  c:\users\home\desktop\task\vector.h(87): note: while compiling class template member function 'T task::Vector<T>::Size(void) const'
+          with
+          [
+              T=double
+          ]
+  c:\users\home\desktop\task\vector.h(200): note: see reference to function template instantiation 'T task::Vector<T>::Size(void) const' being compiled
+          with
+          [
+              T=double
+          ]
+  c:\users\home\desktop\task\vector.h(105): note: while compiling class template member function 'task::Vector<double>::~Vector(void)'
+  c:\users\home\desktop\task\main.cpp(6): note: see reference to function template instantiation 'task::Vector<double>::~Vector(void)' being compiled
+  c:\users\home\desktop\task\main.cpp(6): note: see reference to class template instantiation 'task::Vector<double>' being compiled
+c:\users\home\desktop\task\header.h(128): warning C4244: 'return': conversion from 'const size_t' to 'T', possible loss of data
+          with
+          [
+              T=double
+          ]
+  c:\users\home\desktop\task\header.h(127): note: while compiling class template member function 'T task::Matrix<T>::Rows(void) const'
+          with
+          [
+              T=double
+          ]
+  c:\users\home\desktop\task\header.h(86): note: see reference to function template instantiation 'T task::Matrix<T>::Rows(void) const' being compiled
+          with
+          [
+              T=double
+          ]
+c:\users\home\desktop\task\header.h(134): warning C4244: 'return': conversion from 'const size_t' to 'T', possible loss of data
+          with
+          [
+              T=double
+          ]
+  c:\users\home\desktop\task\header.h(133): note: while compiling class template member function 'T task::Matrix<T>::Cols(void) const'
+          with
+          [
+              T=double
+          ]
+  c:\users\home\desktop\task\header.h(89): note: see reference to function template instantiation 'T task::Matrix<T>::Cols(void) const' being compiled
+          with
+          [
+              T=double
+          ]
+c:\users\home\desktop\task\header.h(208): warning C4244: 'argument': conversion from 'T' to 'size_t', possible loss of data
+          with
+          [
+              T=double
+          ]
+  c:\users\home\desktop\task\vector.h(206): note: see reference to function template instantiation 'task::Matrix<T> task::Matrix<T>::operator *<T>(task::Matrix<T>)' being compiled
+          with
+          [
+              T=double
+          ]
+  c:\users\home\desktop\task\vector.h(206): note: see reference to function template instantiation 'task::Matrix<T> task::Matrix<T>::operator *<T>(task::Matrix<T>)' being compiled
+          with
+          [
+              T=double
+          ]
+  c:\users\home\desktop\task\main.cpp(10): note: see reference to function template instantiation 'task::Matrix<T> task::Vector<T>::operator *<T>(task::Matrix<T>)' being compiled
+          with
+          [
+              T=double
+          ]
+  c:\users\home\desktop\task\main.cpp(10): note: see reference to function template instantiation 'task::Matrix<T> task::Vector<T>::operator *<T>(task::Matrix<T>)' being compiled
+          with
+          [
+              T=double
+          ]
+c:\users\home\desktop\task\header.h(234): warning C4715: 'task::Matrix<double>::operator*<double>': not all control paths return a value
   Project1.vcxproj -> C:\Users\Home\Desktop\Task\Project1\x64\Debug\Project1.exe

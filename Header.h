@@ -66,8 +66,7 @@ namespace task
 		template<typename U>
 		Matrix<T> operator*(U);
 
-
-		template<typename U>
+			template<typename U>
 		Matrix<T> operator/(U);
 
 		template <typename U>
@@ -199,7 +198,8 @@ namespace task
 	// Multiplication of Two Matrices
 	template <class T>
 	template <typename U>
-	inline Matrix<T> Matrix<T>::operator*(Matrix<U> B) {
+	inline Matrix<T> Matrix<T>::operator*(Matrix<U> B)
+	{
 		try
 		{
 
@@ -233,6 +233,8 @@ namespace task
 		}
 	}
 
+
+
 	// Scalar Multiplication 
 	template <class T>
 	template <typename U>
@@ -241,7 +243,7 @@ namespace task
 		Matrix<T> result(this->iRows, this->iCols);
 		for (size_t i = 0; i < this->iRows; i++)
 		{
-			for (size_t j = 0; j < this->iRows; j++)
+			for (size_t j = 0; j < this->iCols; j++)
 			{
 				result.SetValue(i, j, this->iMat[i][j] * scalar);
 			}
@@ -249,13 +251,16 @@ namespace task
 		return result;
 	}
 
+	
+
+
 	// Scalar Division
 	template <class T>
 	template <typename U>
 	inline Matrix<T> Matrix<T>:: operator/(U scalar)
 	{
 		Matrix<T> result(this->iRows, this->iCols);
-	
+
 		for (size_t i = 0; i < this->iRows; i++)
 		{
 			for (size_t j = 0; j < this->iCols; j++)
@@ -287,7 +292,7 @@ namespace task
 	inline Matrix<T> Matrix<T>::operator+(U scalar)
 	{
 		Matrix<T> result(this->iRows, this->iCols);
-		
+
 		for (size_t i = 0; i < iRows; i++)
 		{
 			for (size_t j = 0; j < iCols; j++)
