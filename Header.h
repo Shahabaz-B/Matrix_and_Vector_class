@@ -41,8 +41,6 @@ namespace task
 
 		void SetValue(size_t i, size_t j, T value_);
 
-		void SetValue(Mat<T>  value_);
-
 		void SetCol(size_t colNumber_, std::vector<T> valueArray_);
 
 		void SetRow(size_t rowNumber_, std::vector<T> valueArray_);
@@ -108,19 +106,7 @@ namespace task
 	template <class T>
 	inline void Matrix <T>::SetValue(size_t i, size_t j, T value_)
 	{
-		iMat[i][j] = value_;
-	}
-
-	template <class T>
-	inline void Matrix <T>::SetValue(Mat<T> value_)
-	{
-		for (size_t row = 0, ipRow = 0; row < this->iRows && ipRow < value_.size(); row++, ipRow++)
-		{
-			for (size_t col = 0, ipCol = 0; col < this->iCols && ipCol < value_[0].size(); col++, ipCol++)
-			{
-				iMat[row][col] = value_[ipRow][ipCol];
-			}
-		}
+		this->iMat[i][j] = value_;
 	}
 
 	template <class T>
