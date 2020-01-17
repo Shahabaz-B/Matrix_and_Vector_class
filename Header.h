@@ -1,3 +1,17 @@
+/*
+This code is produced as a solution for the task given by 'atlatec GmbH', 
+here is the task description;
+
+1. Matrices and vectors shall be able to be multiplied. 
+2. Addition and scalar multiplication shall be supported as well. 
+3. No linear algebra functions are sought for (e.g. inverse, linear solving, svd etc.). 
+
+This file contatins all the contains Matrix class type and its respective functions
+
+Author : Shahabaz Bagwan
+Date : 17.01.2020
+*/
+
 #pragma once
 #include <stdio.h>
 #include <iostream>
@@ -13,65 +27,79 @@ namespace task
 		using Mat = std::vector<std::vector<T>>;
 
 	public:
+		
+		// Constructor to provide initial size of matrix
 		Matrix(size_t rows_, size_t cols_) : iRows(rows_), iCols(cols_)
 		{
 			iMat = Mat<T>(rows_, std::vector<T>(cols_, 0));
 		}
 
+		// Default constructor
 		Matrix() :iRows(0), iCols(0)
 		{
 		}
 
+		// Constructor with direct matrix data input
 		Matrix(Mat<T> inputMatrix)
 		{
 			iMat = inputMatrix;
 			iRows = inputMatrix.size(); iCols = inputMatrix[0].size();
 		}
 
+		// Provides number of rows of matrix
 		T Rows() const;
+
+		// Provides number of columns of matrix
 		T Cols() const;
 
+		// Returns value from matrix at index i, j
 		T operator() (size_t i, size_t j);
 
-		void operator= (Mat<T> inputMatrix)
-		{
-			iMat = inputMatrix;
-			iRows = inputMatrix.size(); iCols = inputMatrix[0].size();
-		}
-
+		// sets the value at index i, j
 		void SetValue(size_t i, size_t j, T value_);
 
+		// sets a particular column with given std::vector value
 		void SetCol(size_t colNumber_, std::vector<T> valueArray_);
 
+		// sets a particular row with given std::vector value
 		void SetRow(size_t rowNumber_, std::vector<T> valueArray_);
 
+		// Adds matrices
 		template<typename U>
 		Matrix<T> operator+(Matrix<U>);
 
+		// Subtracts matrices
 		template<typename U>
 		Matrix<T> operator-(Matrix<U>);
 
+		// Multiplies matrices
 		template<typename U>
 		Matrix<T> operator*(Matrix<U>);
 
+		// Provides transpose of a matrix
 		Matrix<T> transpose();
 
+		// Adds a scalar value to matrix
 		template<typename U>
 		Matrix<T> operator+(U);
 
-
+		// Subtracts a scalar value from matrix
 		template<typename U>
 		Matrix<T> operator-(U);
 
+		// Multiplies a scalar value with matrix
 		template<typename U>
 		Matrix<T> operator*(U);
 
-			template<typename U>
+		// Divides matrix value with a scalar
+		template<typename U>
 		Matrix<T> operator/(U);
 
+		// Prints matrix
 		template <typename U>
 		friend std::ostream& operator<<(std::ostream& stream, Matrix<U> &dt);
 
+		// Destructor to clear memory
 		~Matrix();
 
 	private:
@@ -79,16 +107,17 @@ namespace task
 		size_t iRows, iCols;
 	};
 
+	// To print matrix
 	template <class T>
-	std::ostream& operator<<(std::ostream& stream, Matrix<T> &dt)
+	std::ostream& operator<<(std::ostream& stream, Matrix<T> &data)
 	{
 		stream << "\n";
-		for (size_t i = 0; i < dt.Rows(); i++)
+		for (size_t i = 0; i < data.Rows(); i++)
 		{
 			stream << "  ";
-			for (size_t j = 0; j < dt.Cols(); j++)
+			for (size_t j = 0; j < data.Cols(); j++)
 			{
-				stream << dt(i, j) << "  ";
+				stream << data(i, j) << "  ";
 			}
 			stream << "\n";
 		}
@@ -96,6 +125,7 @@ namespace task
 		return stream;
 	}
 
+	// Returns value from matrix at index i, j
 	template <class T>
 	inline T Matrix <T>::operator()(size_t i, size_t j)
 	{
@@ -108,6 +138,7 @@ namespace task
 		this->iMat[i][j] = value_;
 	}
 
+	// sets a particular row with given std::vector value
 	template <class T>
 	inline void Matrix <T>::SetRow(size_t rowNumber_, std::vector<T> valueArray_)
 	{
@@ -115,6 +146,7 @@ namespace task
 			iMat[rowNumber_][col] = valueArray_[col];
 	}
 
+	// sets a particular column with given std::vector value
 	template <class T>
 	inline void Matrix <T>::SetCol(size_t colNumber_, std::vector<T> valueArray_)
 	{
@@ -122,19 +154,22 @@ namespace task
 			iMat[row][colNumber_] = valueArray_[row];
 	}
 
+	
+	// Provides number of rows of matrix
 	template <class T>
 	inline T Matrix <T>::Rows() const
 	{
 		return this->iRows;
 	}
 
+	// Provides number of columns of matrix
 	template <class T>
 	inline T Matrix <T>::Cols() const
 	{
 		return this->iCols;
 	}
 
-	// Addition of Two Matrices
+	// Adds matrices
 	template <class T>
 	template <typename U>
 	inline Matrix<T> Matrix <T>::operator+(Matrix<U> B)
@@ -165,7 +200,7 @@ namespace task
 		}
 	}
 
-	// Subtraction of Two Matrices
+	// Subtracts matrices
 	template <class T>
 	template <typename U>
 	inline Matrix<T> Matrix <T>::operator-(Matrix<U> B) {
@@ -195,7 +230,7 @@ namespace task
 		}
 	}
 
-	// Multiplication of Two Matrices
+	// Multiplies matrices
 	template <class T>
 	template <typename U>
 	inline Matrix<T> Matrix<T>::operator*(Matrix<U> B)
@@ -233,9 +268,7 @@ namespace task
 		}
 	}
 
-
-
-	// Scalar Multiplication 
+	// Multiplies a scalar value with matrix
 	template <class T>
 	template <typename U>
 	inline Matrix<T> Matrix<T>::operator*(U scalar)
@@ -251,10 +284,7 @@ namespace task
 		return result;
 	}
 
-	
-
-
-	// Scalar Division
+	// Divides matrix value with a scalar
 	template <class T>
 	template <typename U>
 	inline Matrix<T> Matrix<T>:: operator/(U scalar)
@@ -271,7 +301,7 @@ namespace task
 		return result;
 	}
 
-	// Take any given matrices transpose and returns another matrix
+	// Provides transpose of a matrix
 	template <class T>
 	inline Matrix<T> Matrix<T>::transpose()
 	{
@@ -286,7 +316,7 @@ namespace task
 		return Transpose;
 	}
 
-	// Scalar Addition
+	// Adds a scalar value to matrix
 	template <class T>
 	template <class U>
 	inline Matrix<T> Matrix<T>::operator+(U scalar)
@@ -303,7 +333,7 @@ namespace task
 		return result;
 	}
 
-	// Scalar Subraction
+	// Subtracts a scalar value from matrix
 	template <class T>
 	template <typename U>
 	inline Matrix<T> Matrix<T>::operator-(U scalar)
@@ -320,6 +350,7 @@ namespace task
 		return result;
 	}
 
+	// Destructor to clear memory
 	template <class T>
 	inline Matrix<T>::~Matrix()
 	{

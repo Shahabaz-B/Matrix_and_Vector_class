@@ -1,3 +1,9 @@
+/*
+	This is main file it contains some test to display the working of 
+	Matrix and Vector class
+*/
+
+
 #include "Header.h"
 #include "Vector.h"
 
