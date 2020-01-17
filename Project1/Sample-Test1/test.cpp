@@ -1,6 +1,8 @@
 #include "pch.h"
 
-TEST(TestCaseName, TestName) {
-  EXPECT_EQ(1, 1);
-  EXPECT_TRUE(true);
-}
+task::Matrix<double> B({ {1, 2, 3}, {4, 5, 6}, {7, 8, 9} });
+task::Matrix<double> C({ {4, 5, 6}, {7, 8, 9}, {1, 2, 3} });
+
+task::Vector<double> X({ 1, 2, 3 });
+task::Vector<double> Y({ 4, 5, 6 });
+

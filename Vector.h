@@ -7,7 +7,7 @@
 namespace task
 {
 	template<class T = double>
-	class Vector : private Matrix<T>
+	class Vector
 	{
 
 	protected:
@@ -50,10 +50,6 @@ namespace task
 
 		template<typename U>
 		Vector<T> operator-(Vector<U>);
-
-		template<typename U>
-		Vector<T> operator*(Vector<U>);
-
 
 		template<typename U>
 		Matrix<U> operator*(Matrix<U>);
@@ -164,35 +160,6 @@ namespace task
 		}
 	}
 
-	template<class T>
-	template<typename U>
-	inline Vector<T> Vector<T>::operator*(Vector<U> B)
-	{
-		try
-		{
-			if (this->size == B.Size())
-			{
-				Vector<T> result(this->size);
-
-
-				for (size_t j = 0; j < this->size; j++)
-				{
-					result.SetValue(j, this->iVect[0][j] * B(j));
-				}
-
-				return result;
-			}
-			else
-			{
-				std::range_error e("Dimension mismatch while multiplying vectors\n");
-				throw e;
-			}
-		}
-		catch (const std::exception& e) {
-			std::cout << e.what();
-		}
-	}
-
 	template <class T>
 	template <typename U>
 	inline Matrix<U> Vector<T>::operator*(Matrix<U> B)
@@ -274,7 +241,7 @@ namespace task
 		{
 			stream << dt(i) << "  ";
 		}
-		stream << "\n";
+		stream << "\n\n";
 
 		return stream;
 	}

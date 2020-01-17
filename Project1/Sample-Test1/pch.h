@@ -4,5 +4,6 @@
 //
 
 #pragma once
-
+#include "..\..\Header.h"
+#include "..\..\Vector.h"
 #include "gtest/gtest.h"

@@ -1,37 +1,18 @@
 ﻿  main.cpp
-c:\users\home\desktop\task\vector.h(200): warning C4244: 'argument': conversion from 'T' to 'size_t', possible loss of data
+c:\users\home\desktop\task\header.h(208): warning C4244: 'argument': conversion from 'T' to 'size_t', possible loss of data
           with
           [
               T=double
           ]
-  c:\users\home\desktop\task\main.cpp(10): note: see reference to function template instantiation 'task::Matrix<T> task::Vector<T>::operator *<T>(task::Matrix<T>)' being compiled
+  c:\users\home\desktop\task\main.cpp(18): note: see reference to function template instantiation 'task::Matrix<double> task::Matrix<double>::operator *<double>(task::Matrix<double>)' being compiled
+  c:\users\home\desktop\task\main.cpp(18): note: see reference to function template instantiation 'task::Matrix<double> task::Matrix<double>::operator *<double>(task::Matrix<double>)' being compiled
+c:\users\home\desktop\task\vector.h(167): warning C4244: 'argument': conversion from 'T' to 'size_t', possible loss of data
           with
           [
               T=double
           ]
-  c:\users\home\desktop\task\main.cpp(10): note: see reference to function template instantiation 'task::Matrix<T> task::Vector<T>::operator *<T>(task::Matrix<T>)' being compiled
-          with
-          [
-              T=double
-          ]
-c:\users\home\desktop\task\vector.h(88): warning C4244: 'return': conversion from 'const size_t' to 'T', possible loss of data
-          with
-          [
-              T=double
-          ]
-  c:\users\home\desktop\task\vector.h(87): note: while compiling class template member function 'T task::Vector<T>::Size(void) const'
-          with
-          [
-              T=double
-          ]
-  c:\users\home\desktop\task\vector.h(200): note: see reference to function template instantiation 'T task::Vector<T>::Size(void) const' being compiled
-          with
-          [
-              T=double
-          ]
-  c:\users\home\desktop\task\vector.h(105): note: while compiling class template member function 'task::Vector<double>::~Vector(void)'
-  c:\users\home\desktop\task\main.cpp(6): note: see reference to function template instantiation 'task::Vector<double>::~Vector(void)' being compiled
-  c:\users\home\desktop\task\main.cpp(6): note: see reference to class template instantiation 'task::Vector<double>' being compiled
+  c:\users\home\desktop\task\main.cpp(49): note: see reference to function template instantiation 'task::Matrix<double> task::Vector<double>::operator *<double>(task::Matrix<double>)' being compiled
+  c:\users\home\desktop\task\main.cpp(49): note: see reference to function template instantiation 'task::Matrix<double> task::Vector<double>::operator *<double>(task::Matrix<double>)' being compiled
 c:\users\home\desktop\task\header.h(128): warning C4244: 'return': conversion from 'const size_t' to 'T', possible loss of data
           with
           [
@@ -47,6 +28,9 @@ c:\users\home\desktop\task\header.h(128): warning C4244: 'return': conversion fr
           [
               T=double
           ]
+  c:\users\home\desktop\task\header.h(325): note: while compiling class template member function 'task::Matrix<double>::~Matrix(void)'
+  c:\users\home\desktop\task\main.cpp(7): note: see reference to function template instantiation 'task::Matrix<double>::~Matrix(void)' being compiled
+  c:\users\home\desktop\task\main.cpp(7): note: see reference to class template instantiation 'task::Matrix<double>' being compiled
 c:\users\home\desktop\task\header.h(134): warning C4244: 'return': conversion from 'const size_t' to 'T', possible loss of data
           with
           [
@@ -62,30 +46,27 @@ c:\users\home\desktop\task\header.h(134): warning C4244: 'return': conversion fr
           [
               T=double
           ]
-c:\users\home\desktop\task\header.h(208): warning C4244: 'argument': conversion from 'T' to 'size_t', possible loss of data
+c:\users\home\desktop\task\vector.h(84): warning C4244: 'return': conversion from 'const size_t' to 'T', possible loss of data
           with
           [
               T=double
           ]
-  c:\users\home\desktop\task\vector.h(206): note: see reference to function template instantiation 'task::Matrix<T> task::Matrix<T>::operator *<T>(task::Matrix<T>)' being compiled
+  c:\users\home\desktop\task\vector.h(83): note: while compiling class template member function 'T task::Vector<T>::Size(void) const'
           with
           [
               T=double
           ]
-  c:\users\home\desktop\task\vector.h(206): note: see reference to function template instantiation 'task::Matrix<T> task::Matrix<T>::operator *<T>(task::Matrix<T>)' being compiled
+  c:\users\home\desktop\task\vector.h(240): note: see reference to function template instantiation 'T task::Vector<T>::Size(void) const' being compiled
           with
           [
               T=double
           ]
-  c:\users\home\desktop\task\main.cpp(10): note: see reference to function template instantiation 'task::Matrix<T> task::Vector<T>::operator *<T>(task::Matrix<T>)' being compiled
-          with
-          [
-              T=double
-          ]
-  c:\users\home\desktop\task\main.cpp(10): note: see reference to function template instantiation 'task::Matrix<T> task::Vector<T>::operator *<T>(task::Matrix<T>)' being compiled
-          with
-          [
-              T=double
-          ]
+  c:\users\home\desktop\task\vector.h(101): note: while compiling class template member function 'task::Vector<double>::~Vector(void)'
+  c:\users\home\desktop\task\main.cpp(12): note: see reference to function template instantiation 'task::Vector<double>::~Vector(void)' being compiled
+  c:\users\home\desktop\task\main.cpp(12): note: see reference to class template instantiation 'task::Vector<double>' being compiled
 c:\users\home\desktop\task\header.h(234): warning C4715: 'task::Matrix<double>::operator*<double>': not all control paths return a value
+c:\users\home\desktop\task\header.h(166): warning C4715: 'task::Matrix<double>::operator+<double>': not all control paths return a value
+c:\users\home\desktop\task\header.h(196): warning C4715: 'task::Matrix<double>::operator-<double>': not all control paths return a value
+c:\users\home\desktop\task\vector.h(161): warning C4715: 'task::Vector<double>::operator-<double>': not all control paths return a value
+c:\users\home\desktop\task\vector.h(132): warning C4715: 'task::Vector<double>::operator+<double>': not all control paths return a value
   Project1.vcxproj -> C:\Users\Home\Desktop\Task\Project1\x64\Debug\Project1.exe
