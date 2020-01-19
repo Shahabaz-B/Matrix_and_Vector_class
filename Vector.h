@@ -1,12 +1,5 @@
 /*
-This code is produced as a solution for the task given by 'atlatec GmbH', 
-here is the task description;
-
-1. Matrices and vectors shall be able to be multiplied. 
-2. Addition and scalar multiplication shall be supported as well. 
-3. No linear algebra functions are sought for (e.g. inverse, linear solving, svd etc.). 
-
-This file contatins all the contains Vector class type and its respective functions
+This file contains all the contents of Vector class type and its respective functions
 
 Author : Shahabaz Bagwan
 Date : 17.01.2020
