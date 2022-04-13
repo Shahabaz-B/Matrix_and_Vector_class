@@ -5,7 +5,6 @@
 
 
 #include "Header.h"
-#include "Vector.h"
 
 using namespace task;
 int main()

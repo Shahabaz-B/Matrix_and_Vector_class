@@ -1,0 +1,12 @@
+/home/shahabaz/repos/matrixAndVectors/build/CMakeFiles/rebuild_cache.dir
+/home/shahabaz/repos/matrixAndVectors/build/CMakeFiles/edit_cache.dir
+/home/shahabaz/repos/matrixAndVectors/build/CMakeFiles/MatrixAndVector_static.dir
+/home/shahabaz/repos/matrixAndVectors/build/CMakeFiles/MatrixAndVector_shared.dir
+/home/shahabaz/repos/matrixAndVectors/build/example/CMakeFiles/rebuild_cache.dir
+/home/shahabaz/repos/matrixAndVectors/build/example/CMakeFiles/edit_cache.dir
+/home/shahabaz/repos/matrixAndVectors/build/example/matrix/CMakeFiles/rebuild_cache.dir
+/home/shahabaz/repos/matrixAndVectors/build/example/matrix/CMakeFiles/edit_cache.dir
+/home/shahabaz/repos/matrixAndVectors/build/example/matrix/CMakeFiles/matrix.dir
+/home/shahabaz/repos/matrixAndVectors/build/example/vector/CMakeFiles/rebuild_cache.dir
+/home/shahabaz/repos/matrixAndVectors/build/example/vector/CMakeFiles/edit_cache.dir
+/home/shahabaz/repos/matrixAndVectors/build/example/vector/CMakeFiles/vector.dir

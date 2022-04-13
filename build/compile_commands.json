@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/home/shahabaz/repos/matrixAndVectors/build",
+  "command": "/usr/bin/clang++-10 -I../include -g -std=gnu++17 -o CMakeFiles/MatrixAndVector_static.dir/src/Matrix.cpp.o -c /home/shahabaz/repos/matrixAndVectors/src/Matrix.cpp",
+  "file": "/home/shahabaz/repos/matrixAndVectors/src/Matrix.cpp"
+},
+{
+  "directory": "/home/shahabaz/repos/matrixAndVectors/build",
+  "command": "/usr/bin/clang++-10 -I../include -g -std=gnu++17 -o CMakeFiles/MatrixAndVector_static.dir/src/Vector.cpp.o -c /home/shahabaz/repos/matrixAndVectors/src/Vector.cpp",
+  "file": "/home/shahabaz/repos/matrixAndVectors/src/Vector.cpp"
+},
+{
+  "directory": "/home/shahabaz/repos/matrixAndVectors/build",
+  "command": "/usr/bin/clang++-10 -DMatrixAndVector_shared_EXPORTS -I../include -g -fPIC -std=gnu++17 -o CMakeFiles/MatrixAndVector_shared.dir/src/Matrix.cpp.o -c /home/shahabaz/repos/matrixAndVectors/src/Matrix.cpp",
+  "file": "/home/shahabaz/repos/matrixAndVectors/src/Matrix.cpp"
+},
+{
+  "directory": "/home/shahabaz/repos/matrixAndVectors/build",
+  "command": "/usr/bin/clang++-10 -DMatrixAndVector_shared_EXPORTS -I../include -g -fPIC -std=gnu++17 -o CMakeFiles/MatrixAndVector_shared.dir/src/Vector.cpp.o -c /home/shahabaz/repos/matrixAndVectors/src/Vector.cpp",
+  "file": "/home/shahabaz/repos/matrixAndVectors/src/Vector.cpp"
+},
+{
+  "directory": "/home/shahabaz/repos/matrixAndVectors/build",
+  "command": "/usr/bin/clang++-10 -I../example/matrix/src -g -std=gnu++17 -o example/matrix/CMakeFiles/matrix.dir/src/main.cpp.o -c /home/shahabaz/repos/matrixAndVectors/example/matrix/src/main.cpp",
+  "file": "/home/shahabaz/repos/matrixAndVectors/example/matrix/src/main.cpp"
+},
+{
+  "directory": "/home/shahabaz/repos/matrixAndVectors/build",
+  "command": "/usr/bin/clang++-10 -I../example/vector/src -g -std=gnu++17 -o example/vector/CMakeFiles/vector.dir/src/main.cpp.o -c /home/shahabaz/repos/matrixAndVectors/example/vector/src/main.cpp",
+  "file": "/home/shahabaz/repos/matrixAndVectors/example/vector/src/main.cpp"
+}
+]
